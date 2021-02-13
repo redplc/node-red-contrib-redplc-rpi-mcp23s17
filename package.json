@@ -1,7 +1,7 @@
 {
   "name": "node-red-contrib-redplc-rpi-mcp23s17",
-  "version": "1.0.9",
-  "description": "redPlc mcp23s17 Module",
+  "version": "1.0.10",
+  "description": "Node-Red node for mcp23s17",
 
   "dependencies": {
   },

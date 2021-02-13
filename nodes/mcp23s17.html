@@ -31,8 +31,8 @@
         outputs: 1,
 		inputLabels: "in:string",
 		outputLabels: ["out:string"],
-        icon: "rpi.svg",
-        label: function() { return "mcp23s17 @" + this.devspi + ",2" + this.devadr + "H"; },
+        icon: "raspi.png",
+        label: function() { return "mcp23s17 @" + this.devspi + "," + this.devadr; },
     });
 </script>
 
@@ -52,14 +52,14 @@
     <div class="form-row">
         <label for="node-input-devadr"><i class="fa fa-cogs"></i> Dev-Addr.</label>
         <select type="text" id="node-input-devadr" style="width: auto;">
-            <option value="0">20H</option>
-            <option value="1">21H</option>
-            <option value="2">22H</option>
-            <option value="3">23H</option>
-            <option value="4">24H</option>
-            <option value="5">25H</option>
-            <option value="6">26H</option>
-            <option value="7">27H</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
         </select>
     </div>
     <div class="form-row">

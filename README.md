@@ -1,12 +1,20 @@
 # node-red-contrib-redplc-rpi-mcp23s17
 
-redPlc module node for MCP23017 16bit I/O Expander.<br>
+Node-Red node for mcp23s17 16bit I/O Expander.<br>
+
+## Node Features
+- 2 x 8 x Digital Inputs or Digital Outputs
+- Add Pullup Resistor to Digital Inputs
+- Four selectable Spi channels
+- Eight selectable Device Addresses
 
 ## Install
 
-[redPlc use this module node. Install redPlc.](https://www.npmjs.com/package/node-red-contrib-redplc)
+For using with Ladder-Logic install
+[redPlc](https://www.npmjs.com/package/node-red-contrib-redplc) nodes
 
-[If you use this node for other nodes install this.](https://www.npmjs.com/package/node-red-contrib-redplc-module)
+For using with other nodes, install
+[module](https://www.npmjs.com/package/node-red-contrib-redplc-module) nodes
 
 Install with Node-Red Palette Manager or npm command:
 ```
@@ -14,11 +22,11 @@ cd ~/.node-red
 npm install node-red-contrib-redplc-rpi-mcp23s17
 ```
 ## Usage
-Wire this node to first output of redPlc cpu node.<br>
-Global variable I are updated with digital inputs.<br>
-Global variable Q sets digital output.<br>
-This node works only on Raspberry Pi with Raspberry Pi OS.<br>
-Enable SPI with raspi-config.
+This node reads/writes from/to Node-Red global variables<br>
+Update is triggered by redPlc cpu node or module-update node<br>
+This node works only on Raspberry Pi with Raspberry Pi OS<br>
+Enable SPI with raspi-config<br>
+Consult datasheet for absolute maximum ratings<br>
 
 ### Digital Input (Variable I):
 ### Digital Output (Variable Q):
@@ -27,7 +35,7 @@ PA = Input, PB = Input<br>
 PA = Output, PB = Output<br>
 
 |Pin|Bit|Pin|Bit|
-|:--|:-:|:--|:-:|
+|---|---|---|---|
 |PA0|0|PB0|8|
 |PA1|1|PB1|9|
 |PA2|2|PB2|10|
@@ -41,7 +49,7 @@ PA = Input, PB = Output<br>
 PA = Output, PB = Input<br>
 
 |Pin|Bit|Pin|Bit|
-|:--|:-:|:--|:-:|
+|---|---|---|---|
 |PA0|0|PB0|0|
 |PA1|1|PB1|1|
 |PA2|2|PB2|2|

@@ -30,7 +30,7 @@ module.exports = function(RED) {
 
 		node.devadr = parseInt(n.devadr);
 		node.devspi = parseInt(n.devspi);
-		node.name = "@" + node.devspi + ",2" + n.devadr;
+		node.name = "@" + node.devspi + "," + n.devadr;
 
 		node.isdi = ((n.mode0 === MODE_INPUT) || (n.mode1 === MODE_INPUT) || (n.mode0 === MODE_INPUTPULLUP) || (n.mode1 === MODE_INPUTPULLUP));
 		node.isdo = ((n.mode0 === MODE_OUTPUT) || (n.mode1 === MODE_OUTPUT));
